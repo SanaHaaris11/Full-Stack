@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-body {background-color: powderblue;}
-h1   {color: darkred;}
-p    {color: red;}
-</style>
-</head>
-<body>
-    <center><h1><i>Intro </i></h1></center>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="index.html">Index</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2><u>My Intro</u></h2>
-        <p style="color:brown;">Iam gulfarosh sana Haaris from adoni , currently iam pursuing my bachelor's degree in the streem of computer science engineering I have completed my intermediate course in narayana junior college and I have done my schooling in bhashyam high sch at adoni and during my academics I have learnt python programming and additional to this i have basic knowledge on html and sql and using html iam developing a project on vehicle parking management system and I have certification in iot through nptel including this i have participated in tech quiz conducted by jntu and pullah reddy engineering college and I like to make pencil art and listen to music in my free time and iam a good listener and a self disciplined person.</p>
-    </main>
-    <footer>
-        <p style="color:green;">@Thanks for visiting...</p>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1>Scientific Calculator</h1>
+      <div class="display">
+        <input id="screen" type="text" placeholder="0" />
+      </div>
+
+      <div class="btns">
+        <div class="row">
+          <button onclick="fact()">x!</button>
+          <button class="btn">(</button>
+          <button class="btn">)</button>
+          <button class="btn">%</button>
+          <button id="ce" onclick="backspc()">CE</button>
+          <button id="ac" onclick="screen.value=''">AC</button>
+        </div>
+
+        <div class="row">
+          <button onclick="sin()">sin</button>
+          <button onclick="pi()">π</button>
+          <button class="btn">7</button>
+          <button class="btn">8</button>
+          <button class="btn">9</button>
+          <button class="btn">÷</button>
+        </div>
+
+        <div class="row">
+          <button onclick="cos()">cos</button>
+          <button onclick="log()">log</button>
+          <button class="btn">4</button>
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn">×</button>
+        </div>
+
+        <div class="row">
+          <button onclick="tan()">tan</button>
+          <button onclick="sqrt()">√</button>
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">-</button>
+        </div>
+
+        <div class="row">
+          <button onclick="e()">e</button>
+          <button onclick="pow()">
+            x
+            <span style="position: relative; bottom: 0.4em; right: 0.1em"
+              >y</span
+            >
+          </button>
+          <button class="btn">0</button>
+          <button class="btn">.</button>
+          <button
+            id="eval"
+            onclick="screen.value=eval(screen.value),calculate()"
+          >
+            =
+          </button>
+          <button class="btn">+</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
